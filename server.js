@@ -43,6 +43,12 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/profile', (req, res) => {
+    res.render('profile.hbs',{
+        pageTitle: 'Profile Page'
+    });
+});
+
 app.get('/bad', (req,res) => {
     res.send({
         error_message : 'Error from bad request'
